@@ -1,6 +1,5 @@
 import random
 import simpy
-from test2 import *
 import numpy as np
 
 SEED = 42
