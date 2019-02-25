@@ -1,7 +1,6 @@
 import random
 import simpy
 
-
 SEED = 42
 average_processing_time = 0.25
 
@@ -60,4 +59,3 @@ environment.run(1000)
 
 response_times=[x*1000 for x in response_times]
 waiting_times=[x*1000 for x in waiting_times]
-

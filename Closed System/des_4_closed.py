@@ -21,7 +21,7 @@ def client(env, out_pipe, in_pipe, i):
         processing_time_3 = random.expovariate(1 / average_processing_time)
         processing_time_4 = random.expovariate(1 / average_processing_time)
         arrival_time = env.now
-        d = {1: processing_time_1, 2: processing_time_2, 3: i, 4: processing_time_3, 5: processing_time_3}
+        d = {1: processing_time_1, 2: processing_time_2, 3: i, 4: processing_time_3, 5: processing_time_4}
         out_pipe.put(d)
         response = yield in_pipe.get(filter=lambda x: True if x[3] == i else False)
         response_time = env.now - arrival_time
