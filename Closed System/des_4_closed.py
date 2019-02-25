@@ -74,9 +74,9 @@ for i in range(concurrency):
 
 for i in range(num_cores):
     environment.process(server_1(environment,in_pipe_1, in_pipe_2))
-    environment.process(server_1(environment, in_pipe_2, in_pipe_3))
-    environment.process(server_1(environment, in_pipe_3, in_pipe_4))
-    environment.process(server_2(environment, in_pipe_4, out_pipe))
+    environment.process(server_2(environment, in_pipe_2, in_pipe_3))
+    environment.process(server_3(environment, in_pipe_3, in_pipe_4))
+    environment.process(server_4(environment, in_pipe_4, out_pipe))
 
 environment.run(1000)
 
